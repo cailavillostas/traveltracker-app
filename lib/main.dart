@@ -30,7 +30,7 @@ void main() {
                   child: Text(
                     'Caila Villostas',
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 30,
                       color: Colors.black,
                     ),
                   ),
