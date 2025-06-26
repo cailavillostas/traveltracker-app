@@ -22,7 +22,7 @@ class TravelDashboard extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Welcome Caila!'),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.lightBlueAccent,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
