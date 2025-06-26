@@ -1,103 +1,86 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      backgroundColor: Colors.lightBlue[200],
+  runApp(TravelDashboardApp());
+}
+
+class TravelDashboardApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Travel Itinerary',
+      home: TravelDashboard(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class TravelDashboard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Travel tracker App'),
-        backgroundColor: Colors.blue[300],
+        title: Text('Welcome Caila!'),
+        backgroundColor: Colors.blueAccent,
       ),
-      body: Column(
-        children: [
-          // Name Row with container and all margin
-          Container(
-            margin: EdgeInsets.all(10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Name:',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Daily Itinerary
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(16),
+              margin: EdgeInsets.only(bottom: 20),
+              decoration: BoxDecoration(
+                color: Colors.lightBlue[100],
+                borderRadius: BorderRadius.circular(350),
+              ),
+              child: Center(
+                child: Text(
+                  'Daily Itinerary',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  //margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                  child: Text(
-                    'Caila Villostas',
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
 
-          // Age Row with symmetric margin
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  'Age:',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
+            // Trip Overview
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(16),
+              margin: EdgeInsets.only(bottom: 20),
+              decoration: BoxDecoration(
+                color: Colors.orange[100],
+                borderRadius: BorderRadius.circular(350),
+              ),
+              child: Center(
+                child: Text(
+                  'Trip Overview',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  //margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                  child: Text(
-                    '20 Years Old',
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
 
-          // Gender Row with fromLTRB margin
-          Container(
-            margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  'Gender:',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
+            // Time Spent
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.green[100],
+                borderRadius: BorderRadius.circular(350),
+              ),
+              child: Center(
+                child: Text(
+                  'Time Spent',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  //margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                  child: Text(
-                    'Female',
-                    style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    ),
-  ));
+    );
+  }
 }
