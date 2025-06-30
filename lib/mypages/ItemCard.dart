@@ -32,7 +32,7 @@ class Itemcard extends StatelessWidget {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center, // ✅ Horizontal cente
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
           Text(
           travels.destination,
