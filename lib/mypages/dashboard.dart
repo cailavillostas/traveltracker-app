@@ -149,6 +149,6 @@ class dashboard extends StatelessWidget {
           ],
         ),
       ),
-    );
+      );
   }
 }
