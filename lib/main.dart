@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:traveltracker_app/mypages/Addtravel.dart';
-import 'package:traveltracker_app/mypages/dashboard.dart';
-import 'package:traveltracker_app/mypages/ListItems.dart';
+import 'WorldTime/Choose_location.dart';
+import 'WorldTime/mypages/Home.dart';
+import 'WorldTime/mypages/Loading.dart';
 
-void main() {
-  runApp(MaterialApp(
-    routes: {
-      '/' : (context) => Addtravel(),
-      '/add' : (context) => Listitems()
-    },
-  ));
-}
+
+void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
+  initialRoute: '/',  // ✅ Correct this if empty
+  routes: {
+    '/': (context) => Loading(),
+    '/home': (context) => Home(),     // ✅ lowercase route
+    '/location': (context) => ChooseLocation(),
+  },
+));
