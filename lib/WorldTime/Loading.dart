@@ -8,6 +8,7 @@ class Loading extends StatefulWidget {
   _LoadingState createState() => _LoadingState();
 }
 
+
 class _LoadingState extends State<Loading> {
   void setupWorldTime() async {
     print('[Loading] Calling getTime()...');
