@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'WorldTime/Choose_location.dart';
-import 'WorldTime/mypages/Home.dart';
-import 'WorldTime/mypages/Loading.dart';
+import 'package:world_time_app/WorldTime/ChooseLocation.dart';
+import 'package:world_time_app/WorldTime/Home.dart';
+import 'package:world_time_app/WorldTime/Loading.dart';
 
 
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
-  initialRoute: '/',  // ✅ Correct this if empty
+  initialRoute: '/',
   routes: {
     '/': (context) => Loading(),
-    '/home': (context) => Home(),     // ✅ lowercase route
+    '/home': (context) => Home(),
     '/location': (context) => ChooseLocation(),
   },
 ));
+
